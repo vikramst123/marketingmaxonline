@@ -6,9 +6,7 @@
 <title>Contact Us | Marketing Max Online</title>
 
 <style>
-html {
-    scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
     margin: 0;
@@ -29,14 +27,8 @@ header {
     backdrop-filter: blur(10px);
 }
 
-header h2 {
-    margin: 0;
-    font-size: 26px;
-}
-
-header span {
-    color: orange;
-}
+header h2 { margin: 0; font-size: 26px; }
+header span { color: orange; }
 
 nav a {
     color: white;
@@ -45,14 +37,10 @@ nav a {
     font-weight: 500;
 }
 
-nav a:hover {
-    color: orange;
-}
+nav a:hover { color: orange; }
 
 /* CONTACT SECTION */
-.contact-section {
-    padding: 120px 20px;
-}
+.contact-section { padding: 120px 20px; }
 
 .contact-container {
     max-width: 1100px;
@@ -62,41 +50,27 @@ nav a:hover {
     gap: 60px;
 }
 
-.contact-left {
-    flex: 1;
-    min-width: 280px;
-}
+.contact-left { flex: 1; min-width: 280px; }
 
 .contact-left h1 {
     font-size: 42px;
     margin-bottom: 15px;
 }
 
-.contact-left p {
-    color: #dcdcdc;
-}
+.contact-left p { color: #dcdcdc; }
 
-.contact-info {
-    margin-top: 25px;
-}
+.contact-info { margin-top: 25px; }
 
-.contact-info p {
-    margin-bottom: 18px;
-}
+.contact-info p { margin-bottom: 18px; }
 
 .contact-info a {
     color: #bfc3c7;
     text-decoration: none;
 }
 
-.contact-info a:hover {
-    color: orange;
-}
+.contact-info a:hover { color: orange; }
 
-.contact-right {
-    flex: 1;
-    min-width: 280px;
-}
+.contact-right { flex: 1; min-width: 280px; }
 
 form {
     display: flex;
@@ -132,7 +106,6 @@ button:hover {
     transform: scale(1.02);
 }
 
-/* FOOTER */
 footer {
     text-align: center;
     padding: 25px;
@@ -140,11 +113,8 @@ footer {
     font-size: 14px;
 }
 
-/* MOBILE */
 @media (max-width: 768px) {
-    .contact-container {
-        flex-direction: column;
-    }
+    .contact-container { flex-direction: column; }
 }
 </style>
 </head>
@@ -161,7 +131,6 @@ footer {
 </header>
 
 <section class="contact-section">
-
 <div class="contact-container">
 
 <!-- LEFT SIDE -->
@@ -170,7 +139,6 @@ footer {
 <p>Have a project in mind? Send us your details and we’ll respond within 24 hours.</p>
 
 <div class="contact-info">
-
 <p><strong>Business Email:</strong><br>
 <a href="mailto:info@marketingmaxonline.com">info@marketingmaxonline.com</a></p>
 
@@ -182,7 +150,6 @@ footer {
 
 <p><strong>Phone (India):</strong><br>
 <a href="tel:+919953609710">+91 99536 09710</a></p>
-
 </div>
 </div>
 
@@ -193,13 +160,11 @@ footer {
       method="POST"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
-      enctype="multipart/form-data">
+      enctype="multipart/form-data"
+      action="/thankyou.html">
 
-    <!-- Netlify Required Hidden Input -->
+    <!-- Required for Netlify -->
     <input type="hidden" name="form-name" value="contact">
-
-    <!-- Redirect after submit -->
-    <input type="hidden" name="redirect" value="/thankyou.html">
 
     <!-- Honeypot spam protection -->
     <p style="display:none;">
@@ -222,7 +187,6 @@ footer {
 </form>
 
 </div>
-
 </div>
 </section>
 
