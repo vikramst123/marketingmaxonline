@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | Marketing Max Online</title>
+
+<style>
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+}
+
+/* HEADER */
+header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(10px);
+}
+
+header h2 {
+    margin: 0;
+    font-size: 26px;
+}
+
+header span {
+    color: orange;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: orange;
+}
+
+/* CONTACT SECTION */
+.contact-section {
+    padding: 120px 20px;
+}
+
+.contact-container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+
+.contact-left {
+    flex: 1;
+    min-width: 280px;
+}
+
+.contact-left h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.contact-left p {
+    color: #dcdcdc;
+}
+
+.contact-info {
+    margin-top: 25px;
+}
+
+.contact-info p {
+    margin-bottom: 18px;
+}
+
+.contact-info a {
+    color: #bfc3c7;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    color: orange;
+}
+
+.contact-right {
+    flex: 1;
+    min-width: 280px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+input, textarea {
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+    font-size: 14px;
+}
+
+input[type="file"] {
+    background: white;
+    color: black;
+    padding: 10px;
+}
+
+button {
+    padding: 14px;
+    background: orange;
+    border: none;
+    border-radius: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: #ffa733;
+    transform: scale(1.02);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: rgba(0,0,0,0.6);
+    font-size: 14px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h2>Marketing Max <span>Online</span></h2>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#services">Services</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="contact-section">
+
+<div class="contact-container">
+
+<!-- LEFT SIDE -->
+<div class="contact-left">
+<h1>Contact Us</h1>
+<p>Have a project in mind? Send us your details and we’ll respond within 24 hours.</p>
+
+<div class="contact-info">
+
+<p><strong>Business Email:</strong><br>
+<a href="mailto:info@marketingmaxonline.com">info@marketingmaxonline.com</a></p>
+
+<p><strong>Support Email:</strong><br>
+<a href="mailto:vikrams2333@gmail.com">vikrams2333@gmail.com</a></p>
+
+<p><strong>Phone (USA):</strong><br>
+<a href="tel:+16784397483">+1 678 439 7483</a></p>
+
+<p><strong>Phone (India):</strong><br>
+<a href="tel:+919953609710">+91 99536 09710</a></p>
+
+</div>
+</div>
+
+<!-- RIGHT SIDE FORM -->
+<div class="contact-right">
+
+<form name="contact"
+      method="POST"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+      enctype="multipart/form-data">
+
+    <!-- Netlify Required Hidden Input -->
+    <input type="hidden" name="form-name" value="contact">
+
+    <!-- Redirect after submit -->
+    <input type="hidden" name="redirect" value="/thankyou.html">
+
+    <!-- Honeypot spam protection -->
+    <p style="display:none;">
+        <label>Don’t fill this out:
+            <input name="bot-field">
+        </label>
+    </p>
+
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <input type="text" name="phone" placeholder="Phone (Optional)">
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+    <input type="file"
+           name="attachment"
+           accept=".pdf,.doc,.docx,.xls,.xlsx,.png,.jpg,.jpeg,.txt">
+
+    <button type="submit">Send Message</button>
+
+</form>
+
+</div>
+
+</div>
+</section>
+
+<footer>
+© 2026 Marketing Max Online. All Rights Reserved.
+</footer>
+
+</body>
+</html>

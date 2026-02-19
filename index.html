@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marketing Max Online | Digital Growth Agency</title>
+
+<style>
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+}
+
+/* HEADER */
+header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+}
+
+header h2 {
+    margin: 0;
+    font-size: 26px;
+}
+
+header span {
+    color: orange;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: orange;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 140px 20px 100px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    margin-bottom: 20px;
+}
+
+.hero span {
+    color: orange;
+}
+
+.hero p {
+    max-width: 750px;
+    margin: auto;
+    color: #dcdcdc;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 14px 35px;
+    background: orange;
+    color: white;
+    text-decoration: none;
+    border-radius: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ffa733;
+    transform: translateY(-3px);
+}
+
+/* SECTION */
+.section {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 36px;
+}
+
+/* SERVICES */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.service-card {
+    background: rgba(255,255,255,0.08);
+    padding: 35px;
+    border-radius: 20px;
+    transition: 0.3s ease;
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255,255,255,0.15);
+}
+
+/* CONTACT */
+#contact {
+    background: rgba(0,0,0,0.5);
+    padding: 100px 20px;
+}
+
+.contact-container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+.contact-left {
+    flex: 1;
+    min-width: 280px;
+}
+
+.contact-left p {
+    color: #dcdcdc;
+    line-height: 1.7;
+}
+
+.contact-info {
+    margin-top: 25px;
+}
+
+.contact-info p {
+    margin-bottom: 18px;
+}
+
+/* Soft gray color */
+.contact-info a {
+    color: #bfc3c7;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.contact-right {
+    flex: 1;
+    min-width: 280px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+input, textarea {
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+    font-size: 14px;
+}
+
+button {
+    padding: 14px;
+    background: orange;
+    border: none;
+    border-radius: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ffa733;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: rgba(0,0,0,0.6);
+    font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h2>Marketing Max <span>Online</span></h2>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>Grow Your Business <span>Digitally</span></h1>
+    <p>
+        Marketing Max Online is a performance-driven digital marketing agency helping 
+        businesses increase visibility, generate qualified leads, and scale revenue 
+        through strategic SEO, conversion-focused websites, and ROI-based advertising.
+    </p>
+    <a href="#contact" class="btn">Get Free Consultation</a>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+    <h2>Our Services</h2>
+
+    <div class="service-grid">
+        <a href="seo.html" class="service-card">
+            <h3>SEO Optimization</h3>
+            <p>Rank higher with advanced on-page, off-page and technical SEO strategies.</p>
+        </a>
+
+        <a href="web-development.html" class="service-card">
+            <h3>Website Development</h3>
+            <p>Fast, responsive and conversion-focused websites built for growth.</p>
+        </a>
+
+        <a href="ppc.html" class="service-card">
+            <h3>PPC Advertising</h3>
+            <p>Google & Meta Ads campaigns optimized for ROI and lead generation.</p>
+        </a>
+
+        <a href="social-media.html" class="service-card">
+            <h3>Social Media Marketing</h3>
+            <p>Build authority and increase engagement with strategic content marketing.</p>
+        </a>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <div class="contact-container">
+
+        <div class="contact-left">
+            <h2>Get In Touch</h2>
+            <p>
+                Have a project in mind? Reach out directly or fill out the form 
+                and our team will get back to you shortly.
+            </p>
+
+            <div class="contact-info">
+                <p><strong>Business Email:</strong><br>
+                <a href="mailto:info@marketingmaxonline.com">info@marketingmaxonline.com</a></p>
+
+                <p><strong>Support Email:</strong><br>
+                <a href="mailto:vikrams2333@gmail.com">vikrams2333@gmail.com</a></p>
+
+                <p><strong>Phone (USA):</strong><br>
+                <a href="tel:+16784397483">+1 678 439 7483</a></p>
+
+                <p><strong>Phone (India):</strong><br>
+                <a href="tel:+919953609710">+91 99536 09710</a></p>
+            </div>
+        </div>
+
+        <div class="contact-right">
+            <form onsubmit="redirectPage(event)">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <input type="text" placeholder="Phone (Optional)">
+                <textarea rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    © 2026 Marketing Max Online. All Rights Reserved.
+</footer>
+
+<script>
+function redirectPage(event) {
+    event.preventDefault();
+    window.location.href = "thankyou.html";
+}
+</script>
+
+</body>
+</html>
