@@ -1,281 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Marketing Max Online | Digital Growth Agency</title>
+  <meta charset="UTF-8">
+  <title>Marketing Max Online | Digital Marketing & Web Development</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-html { scroll-behavior: smooth; }
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f2027;
+      background: linear-gradient(to right, #203a43, #2c5364);
+      color: white;
+    }
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    color: white;
-}
+    header {
+      background: #111;
+      padding: 20px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+    }
 
-/* HEADER */
-header {
-    position: sticky;
-    top: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 60px;
-    background: rgba(0,0,0,0.3);
-    backdrop-filter: blur(8px);
-    z-index: 1000;
-}
+    header span {
+      color: orange;
+    }
 
-header h2 { margin: 0; font-size: 26px; }
-header span { color: orange; }
+    nav {
+      text-align: center;
+      padding: 10px;
+      background: #1a1a1a;
+    }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 25px;
-    font-weight: 500;
-}
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-nav a:hover { color: orange; }
+    nav a:hover {
+      color: orange;
+    }
 
-/* HERO */
-.hero {
-    text-align: center;
-    padding: 140px 20px 100px;
-}
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
 
-.hero h1 {
-    font-size: 52px;
-    margin-bottom: 20px;
-}
+    .btn {
+      background: orange;
+      padding: 12px 25px;
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 20px;
+    }
 
-.hero span { color: orange; }
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
 
-.hero p {
-    max-width: 750px;
-    margin: auto;
-    color: #dcdcdc;
-    font-size: 18px;
-    line-height: 1.6;
-}
+    .service-box {
+      background: rgba(255,255,255,0.1);
+      padding: 20px;
+      width: 280px;
+      border-radius: 8px;
+    }
 
-.btn {
-    display: inline-block;
-    margin-top: 35px;
-    padding: 14px 35px;
-    background: orange;
-    color: white;
-    text-decoration: none;
-    border-radius: 40px;
-    font-weight: bold;
-}
+    .contact-box {
+      max-width: 600px;
+      margin: auto;
+      background: rgba(255,255,255,0.1);
+      padding: 30px;
+      border-radius: 8px;
+    }
 
-.btn:hover { background: #ffa733; }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+    }
 
-/* SECTION */
-.section {
-    padding: 100px 20px;
-    text-align: center;
-}
+    input[type="file"] {
+      background: white;
+      color: black;
+    }
 
-.section h2 { font-size: 36px; }
+    button {
+      background: orange;
+      border: none;
+      padding: 12px 20px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+    }
 
-/* SERVICES */
-.service-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    margin-top: 50px;
-}
-
-.service-card {
-    background: rgba(255,255,255,0.08);
-    padding: 35px;
-    border-radius: 20px;
-    transition: 0.3s ease;
-    text-decoration: none;
-    color: white;
-    display: block;
-}
-
-.service-card:hover {
-    transform: translateY(-8px);
-    background: rgba(255,255,255,0.15);
-}
-
-/* CONTACT */
-#contact {
-    background: rgba(0,0,0,0.5);
-    padding: 100px 20px;
-}
-
-.contact-container {
-    max-width: 1100px;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 60px;
-    align-items: flex-start;
-}
-
-.contact-left {
-    flex: 1;
-    min-width: 280px;
-}
-
-.contact-left p {
-    color: #dcdcdc;
-    line-height: 1.7;
-}
-
-.contact-info { margin-top: 25px; }
-
-.contact-info p { margin-bottom: 18px; }
-
-.contact-info a {
-    color: #bfc3c7;
-    text-decoration: none;
-}
-
-.contact-info a:hover { text-decoration: underline; }
-
-.contact-right {
-    flex: 1;
-    min-width: 280px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-}
-
-input, textarea {
-    padding: 14px;
-    border-radius: 10px;
-    border: none;
-    font-size: 14px;
-}
-
-button {
-    padding: 14px;
-    background: orange;
-    border: none;
-    border-radius: 40px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-button:hover { background: #ffa733; }
-
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 25px;
-    background: rgba(0,0,0,0.6);
-    font-size: 14px;
-}
-</style>
+    footer {
+      background: #111;
+      padding: 20px;
+      text-align: center;
+      margin-top: 50px;
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
-    <h2>Marketing Max <span>Online</span></h2>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-    </nav>
+  Marketing Max <span>Online</span>
 </header>
 
+<nav>
+  <a href="#home">Home</a>
+  <a href="#services">Services</a>
+  <a href="#contact">Contact</a>
+</nav>
+
 <!-- HERO -->
-<section class="hero">
-    <h1>Grow Your Business <span>Digitally</span></h1>
-    <p>
-        Marketing Max Online is a performance-driven digital marketing agency helping 
-        businesses increase visibility, generate qualified leads, and scale revenue.
-    </p>
-    <a href="#contact" class="btn">Get Free Consultation</a>
+<section id="home">
+  <h1>Grow Your Business Online</h1>
+  <p>Professional Digital Marketing, SEO & Website Development Services.</p>
+  <a href="#contact" class="btn">Start Your Project</a>
 </section>
 
 <!-- SERVICES -->
-<section class="section" id="services">
-    <h2>Our Services</h2>
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="services">
 
-    <div class="service-grid">
-        <a href="seo.html" class="service-card">
-            <h3>SEO Optimization</h3>
-            <p>Rank higher with advanced SEO strategies.</p>
-        </a>
-
-        <a href="web-development.html" class="service-card">
-            <h3>Website Development</h3>
-            <p>Fast, responsive and conversion-focused websites.</p>
-        </a>
-
-        <a href="ppc.html" class="service-card">
-            <h3>PPC Advertising</h3>
-            <p>ROI-focused Google & Meta Ads campaigns.</p>
-        </a>
-
-        <a href="social-media.html" class="service-card">
-            <h3>Social Media Marketing</h3>
-            <p>Strategic content marketing for growth.</p>
-        </a>
+    <div class="service-box">
+      <h3>Website Development</h3>
+      <p>Custom responsive websites designed for performance and conversion.</p>
+      <a href="web-development.html" class="btn">View Details</a>
     </div>
+
+    <div class="service-box">
+      <h3>SEO Optimization</h3>
+      <p>Rank higher on Google and generate organic leads.</p>
+      <a href="seo.html" class="btn">View Details</a>
+    </div>
+
+    <div class="service-box">
+      <h3>PPC Advertising</h3>
+      <p>High-converting paid ad campaigns for fast results.</p>
+      <a href="ppc.html" class="btn">View Details</a>
+    </div>
+
+    <div class="service-box">
+      <h3>Social Media Marketing</h3>
+      <p>Grow your brand visibility and audience engagement.</p>
+      <a href="social-media.html" class="btn">View Details</a>
+    </div>
+
+  </div>
 </section>
 
-<!-- CONTACT -->
+<!-- CONTACT SECTION -->
 <section id="contact">
-    <div class="contact-container">
+  <h2>Get In Touch</h2>
 
-        <div class="contact-left">
-            <h2>Get In Touch</h2>
-            <p>Reach out and our team will respond shortly.</p>
+  <div class="contact-box">
 
-            <div class="contact-info">
-                <p><strong>Email:</strong><br>
-                <a href="mailto:info@marketingmaxonline.com">info@marketingmaxonline.com</a></p>
+    <p><strong>Email:</strong> info@marketingmaxonline.com</p>
+    <p><strong>Support Email:</strong> vikrams2333@gmail.com</p>
+    <p><strong>Phone (USA):</strong> +1 678 439 7483</p>
+    <p><strong>Phone (India):</strong> +91 99536 09710</p>
 
-                <p><strong>Phone:</strong><br>
-                +1 678 439 7483</p>
-            </div>
-        </div>
+    <hr style="margin: 20px 0;">
 
-        <div class="contact-right">
-            <form name="contact"
-                  method="POST"
-                  data-netlify="true"
-                  data-netlify-honeypot="bot-field"
-                  action="/thankyou.html">
+    <!-- NETLIFY FORM -->
+    <form name="contact" method="POST" data-netlify="true" enctype="multipart/form-data" action="/thankyou.html">
 
-                <input type="hidden" name="form-name" value="contact">
+      <input type="hidden" name="form-name" value="contact">
 
-                <p style="display:none;">
-                    <label>Don’t fill this out:
-                        <input name="bot-field">
-                    </label>
-                </p>
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="tel" name="phone" placeholder="Your Phone Number">
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
 
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <input type="text" name="phone" placeholder="Phone (Optional)">
-                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <label style="display:block; margin-top:10px;">Upload File (Optional)</label>
+      <input type="file" name="attachment">
 
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
+      <button type="submit">Submit</button>
 
-    </div>
+    </form>
+
+  </div>
 </section>
 
 <footer>
-    © 2026 Marketing Max Online. All Rights Reserved.
+  © 2026 Marketing Max Online | All Rights Reserved
 </footer>
 
 </body>
 </html>
-
