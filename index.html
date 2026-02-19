@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Us | Marketing Max Online</title>
+<title>Marketing Max Online | Digital Growth Agency</title>
 
 <style>
 html { scroll-behavior: smooth; }
@@ -23,8 +23,9 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 60px;
-    background: rgba(0,0,0,0.4);
-    backdrop-filter: blur(10px);
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
 }
 
 header h2 { margin: 0; font-size: 26px; }
@@ -39,8 +40,76 @@ nav a {
 
 nav a:hover { color: orange; }
 
-/* CONTACT SECTION */
-.contact-section { padding: 120px 20px; }
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 140px 20px 100px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    margin-bottom: 20px;
+}
+
+.hero span { color: orange; }
+
+.hero p {
+    max-width: 750px;
+    margin: auto;
+    color: #dcdcdc;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 14px 35px;
+    background: orange;
+    color: white;
+    text-decoration: none;
+    border-radius: 40px;
+    font-weight: bold;
+}
+
+.btn:hover { background: #ffa733; }
+
+/* SECTION */
+.section {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.section h2 { font-size: 36px; }
+
+/* SERVICES */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.service-card {
+    background: rgba(255,255,255,0.08);
+    padding: 35px;
+    border-radius: 20px;
+    transition: 0.3s ease;
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255,255,255,0.15);
+}
+
+/* CONTACT */
+#contact {
+    background: rgba(0,0,0,0.5);
+    padding: 100px 20px;
+}
 
 .contact-container {
     max-width: 1100px;
@@ -48,16 +117,18 @@ nav a:hover { color: orange; }
     display: flex;
     flex-wrap: wrap;
     gap: 60px;
+    align-items: flex-start;
 }
 
-.contact-left { flex: 1; min-width: 280px; }
-
-.contact-left h1 {
-    font-size: 42px;
-    margin-bottom: 15px;
+.contact-left {
+    flex: 1;
+    min-width: 280px;
 }
 
-.contact-left p { color: #dcdcdc; }
+.contact-left p {
+    color: #dcdcdc;
+    line-height: 1.7;
+}
 
 .contact-info { margin-top: 25px; }
 
@@ -68,9 +139,12 @@ nav a:hover { color: orange; }
     text-decoration: none;
 }
 
-.contact-info a:hover { color: orange; }
+.contact-info a:hover { text-decoration: underline; }
 
-.contact-right { flex: 1; min-width: 280px; }
+.contact-right {
+    flex: 1;
+    min-width: 280px;
+}
 
 form {
     display: flex;
@@ -85,12 +159,6 @@ input, textarea {
     font-size: 14px;
 }
 
-input[type="file"] {
-    background: white;
-    color: black;
-    padding: 10px;
-}
-
 button {
     padding: 14px;
     background: orange;
@@ -98,23 +166,16 @@ button {
     border-radius: 40px;
     font-weight: bold;
     cursor: pointer;
-    transition: 0.3s ease;
 }
 
-button:hover {
-    background: #ffa733;
-    transform: scale(1.02);
-}
+button:hover { background: #ffa733; }
 
+/* FOOTER */
 footer {
     text-align: center;
     padding: 25px;
     background: rgba(0,0,0,0.6);
     font-size: 14px;
-}
-
-@media (max-width: 768px) {
-    .contact-container { flex-direction: column; }
 }
 </style>
 </head>
@@ -124,75 +185,97 @@ footer {
 <header>
     <h2>Marketing Max <span>Online</span></h2>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="index.html#services">Services</a>
-        <a href="contact.html">Contact</a>
+        <a href="#">Home</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
     </nav>
 </header>
 
-<section class="contact-section">
-<div class="contact-container">
-
-<!-- LEFT SIDE -->
-<div class="contact-left">
-<h1>Contact Us</h1>
-<p>Have a project in mind? Send us your details and we’ll respond within 24 hours.</p>
-
-<div class="contact-info">
-<p><strong>Business Email:</strong><br>
-<a href="mailto:info@marketingmaxonline.com">info@marketingmaxonline.com</a></p>
-
-<p><strong>Support Email:</strong><br>
-<a href="mailto:vikrams2333@gmail.com">vikrams2333@gmail.com</a></p>
-
-<p><strong>Phone (USA):</strong><br>
-<a href="tel:+16784397483">+1 678 439 7483</a></p>
-
-<p><strong>Phone (India):</strong><br>
-<a href="tel:+919953609710">+91 99536 09710</a></p>
-</div>
-</div>
-
-<!-- RIGHT SIDE FORM -->
-<div class="contact-right">
-
-<form name="contact"
-      method="POST"
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
-      enctype="multipart/form-data"
-      action="/thankyou.html">
-
-    <!-- Required for Netlify -->
-    <input type="hidden" name="form-name" value="contact">
-
-    <!-- Honeypot spam protection -->
-    <p style="display:none;">
-        <label>Don’t fill this out:
-            <input name="bot-field">
-        </label>
+<!-- HERO -->
+<section class="hero">
+    <h1>Grow Your Business <span>Digitally</span></h1>
+    <p>
+        Marketing Max Online is a performance-driven digital marketing agency helping 
+        businesses increase visibility, generate qualified leads, and scale revenue.
     </p>
+    <a href="#contact" class="btn">Get Free Consultation</a>
+</section>
 
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <input type="text" name="phone" placeholder="Phone (Optional)">
-    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+<!-- SERVICES -->
+<section class="section" id="services">
+    <h2>Our Services</h2>
 
-    <input type="file"
-           name="attachment"
-           accept=".pdf,.doc,.docx,.xls,.xlsx,.png,.jpg,.jpeg,.txt">
+    <div class="service-grid">
+        <a href="seo.html" class="service-card">
+            <h3>SEO Optimization</h3>
+            <p>Rank higher with advanced SEO strategies.</p>
+        </a>
 
-    <button type="submit">Send Message</button>
+        <a href="web-development.html" class="service-card">
+            <h3>Website Development</h3>
+            <p>Fast, responsive and conversion-focused websites.</p>
+        </a>
 
-</form>
+        <a href="ppc.html" class="service-card">
+            <h3>PPC Advertising</h3>
+            <p>ROI-focused Google & Meta Ads campaigns.</p>
+        </a>
 
-</div>
-</div>
+        <a href="social-media.html" class="service-card">
+            <h3>Social Media Marketing</h3>
+            <p>Strategic content marketing for growth.</p>
+        </a>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <div class="contact-container">
+
+        <div class="contact-left">
+            <h2>Get In Touch</h2>
+            <p>Reach out and our team will respond shortly.</p>
+
+            <div class="contact-info">
+                <p><strong>Email:</strong><br>
+                <a href="mailto:info@marketingmaxonline.com">info@marketingmaxonline.com</a></p>
+
+                <p><strong>Phone:</strong><br>
+                +1 678 439 7483</p>
+            </div>
+        </div>
+
+        <div class="contact-right">
+            <form name="contact"
+                  method="POST"
+                  data-netlify="true"
+                  data-netlify-honeypot="bot-field"
+                  action="/thankyou.html">
+
+                <input type="hidden" name="form-name" value="contact">
+
+                <p style="display:none;">
+                    <label>Don’t fill this out:
+                        <input name="bot-field">
+                    </label>
+                </p>
+
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="text" name="phone" placeholder="Phone (Optional)">
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+    </div>
 </section>
 
 <footer>
-© 2026 Marketing Max Online. All Rights Reserved.
+    © 2026 Marketing Max Online. All Rights Reserved.
 </footer>
 
 </body>
 </html>
+
